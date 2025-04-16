@@ -4,13 +4,13 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: 'Meichy BLog ',
+    title: 'Meichy BLog',
     // site subtitle
     subtitle: '个人博客',
     // site description
     description: '点点滴滴',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
-    i18nTitle: false, // true, false
+    i18nTitle: true, // true, false
     // author name
     author: 'Meichy',
     // site url
@@ -56,7 +56,7 @@ export const themeConfig: ThemeConfig = {
     locale: 'zh', // zh, zh-tw, ja, en, es, ru
     // more languages
     // not fill in the locale code above again
-    moreLocales: ['zh-tw', 'ja', 'en', 'es', 'ru'], // ['zh', 'zh-tw', 'ja', 'en', 'es', 'ru']
+    moreLocales: [], // ['zh', 'zh-tw', 'ja', 'en', 'es', 'ru']
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
@@ -95,7 +95,7 @@ export const themeConfig: ThemeConfig = {
   // SEO SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   seo: {
     // @twitter ID
-    twitterID: '',
+    // twitterID: '',
     // site verification
     verification: {
       // google search console
@@ -144,10 +144,10 @@ export const themeConfig: ThemeConfig = {
         name: 'GitHub',
         url: 'https://github.com/radishzzz/astro-theme-retypeset',
       },
-      {
-        name: 'Twitter',
-        url: '',
-      },
+#      {
+#        name: 'Twitter',
+#        url: '',
+#      },
       // {
       //   name: 'Email',
       //   url: 'https://example@gmail.com',
