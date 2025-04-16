@@ -144,10 +144,10 @@ export const themeConfig: ThemeConfig = {
         name: 'GitHub',
         url: 'https://github.com/radishzzz/astro-theme-retypeset',
       },
-#      {
-#        name: 'Twitter',
-#        url: '',
-#      },
+      //{
+      //  name: 'Twitter',
+      //  url: '',
+      // },
       // {
       //   name: 'Email',
       //   url: 'https://example@gmail.com',
