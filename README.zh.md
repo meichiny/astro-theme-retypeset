@@ -30,7 +30,7 @@ Retypeset 是一款基于 [Astro](https://astro.build/) 框架的静态博客主
 ## 特征
 
 - 基于 Astro 与 UnoCSS 开发
-- 支持 SEO、Sitemap、OpenGraph、TOC、RSS、MDX 和 KaTeX
+- 支持 SEO、Sitemap、OpenGraph、TOC、RSS、MDX 和 LaTeX
 - i18n 多语言
 - 亮色/暗色模式
 - 优雅的过渡动画
@@ -41,35 +41,64 @@ Retypeset 是一款基于 [Astro](https://astro.build/) 框架的静态博客主
 
 ## 性能
 
+<br>
+
 <p align="center">
   <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fretypeset.radishzz.cc%2F">
     <img width="710" alt="Retypeset Lighthouse Score" src="assets/retypeset-lighthouse-score.svg">
   <a>
 </p>
 
-## 部署
+## 开始
 
-1. 点击 [`Fork`](https://github.com/radishzzz/astro-theme-retypeset/fork) 克隆本仓库。
+1. [Fork](https://github.com/radishzzz/astro-theme-retypeset/fork) 此仓库，或使用此模版创建新仓库。
 
-2. 点击下方 `Deploy to Netlify` 或 `Deploy to Vercel`
+2. 点击 `Code` 按钮，复制 `HTTPS` 地址，在终端执行：
+
+   ```bash
+   # 克隆仓库
+   git clone 仓库地址
+
+   # 进入项目目录
+   cd 仓库名称
+
+   # 全局安装 pnpm（如果未安装）
+   npm install -g pnpm
+
+   # 安装依赖
+   pnpm install
+
+   # 启动开发服务器
+   pnpm dev
+   ```
+
+3. 在浏览器中打开 [localhost:4321](http://localhost:4321/)，查看网站的实时预览。
+
+4. 参考 [主题上手指南](https://retypeset.radishzz.cc/posts/theme-guide/)，自定义你的博客并创建新文章。
+
+5. 参考 [Astro 部署指南](https://docs.astro.build/zh-cn/guides/deploy/)，将博客部署至 Netlify、Vercel 等平台。
 
 &emsp;[![Deploy to Netlify](assets/deploy-netlify.svg)](https://app.netlify.com/start)
-[![Deploy to Vercel](assets/deploy-vercel.svg)](https://vercel.com/new)
-
-3. 选择对应仓库，点击 `Deploy` 即可。
-
-其它平台请参考 [Astro 部署指南](https://docs.astro.build/zh-cn/guides/deploy/)。
+ [![Deploy to Vercel](assets/deploy-vercel.svg)](https://vercel.com/new)
 
 ## 更新
 
-1. 参考 [GitHub 文档](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) 在克隆仓库中执行 `Sync fork` 同步最新分支。
+- 参考 [GitHub 文档](https://docs.github.com/zh/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork)，在仓库中执行 `Sync fork` 同步复刻。
 
-2. 不要点击 `Discard Changes` 放弃你的更改。
+- 不要点击 `Discard Changes`，否则会丢失你的更改。
 
-## 文档
+## 指令
 
-- [主题上手指南](https://retypeset.radishzz.cc/posts/theme-guide/)
-- [主题配置文件](https://github.com/radishzzz/astro-theme-retypeset/blob/master/src/config.ts)
+以下指令均需要在项目根目录执行：
+
+| 指令                   | 作用                                   |
+| :--------------------- | :------------------------------------- |
+| `pnpm install`         | 安装依赖                               |
+| `pnpm dev`             | 在 `localhost:4321` 启动本地开发服务器 |
+| `pnpm build`           | 构建网站至 `./dist/`                   |
+| `pnpm preview`         | 本地预览已构建的网站                   |
+| `pnpm astro ...`       | 执行 `astro add`, `astro check` 等命令 |
+| `pnpm astro -- --help` | 获取 Astro CLI 帮助信息                |
 
 ## 鸣谢
 
