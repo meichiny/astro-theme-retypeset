@@ -5,6 +5,7 @@ tags:
   - 芥川龙之介
   - 近代文学
 lang: zh
+draft: true
 abbrlink: rashomon
 ---
 
