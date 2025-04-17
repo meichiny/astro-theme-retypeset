@@ -43,7 +43,7 @@ toc: true
 
 ### 制定TNR实施路径
 
-![](../../../assets/TNR实施思考过程.png)
+![](../../../assets/rethink-tnr-progress.png)
 <center><small>（这是完成之后的简单复盘）</small></center>
 
 开始找资源咨询专业服务。
