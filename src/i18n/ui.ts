@@ -1,8 +1,8 @@
 export const ui = {
   'zh': {
-    title: '槑笔记',
-    subtitle: '点点滴滴',
-    description: '生活与学习记录。',
+    title: '猫在旁边',
+    subtitle: '小角落的喵与字',
+    description: '所有片刻里，都有一只猫静静地在旁边',
     posts: '文章',
     tags: '标签',
     about: '关于',
