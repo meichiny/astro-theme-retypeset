@@ -2,7 +2,7 @@
 title: 一个想法：整理TNR方法包
 abbrlink: kit-package-for-cat-tnr
 published: 2024-08-11
-updted: 2025-04-17
+updated: 2025-04-17
 description: 前几日冒出一个想法，整理流浪猫TNR方法包，方便群护人查阅。
 tags:
   - 流浪猫
