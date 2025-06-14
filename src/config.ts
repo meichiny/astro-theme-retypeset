@@ -4,28 +4,27 @@ export const themeConfig: ThemeConfig = {
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   site: {
     // site title
-    title: '猫在旁边',
+    title: 'Retypeset',
     // site subtitle
-    subtitle: '小角落的喵与字',
+    subtitle: 'Revive the beauty of typography',
     // site description
-    description: '所有片刻里，都有一只猫静静地在旁边',
+    description: 'Retypeset is a static blog theme based on the Astro framework. Inspired by Typography, Retypeset establishes a new visual standard and reimagines the layout of all pages, creating a reading experience reminiscent of paper books, reviving the beauty of typography. Details in every sight, elegance in every space.',
     // use i18n title/subtitle/description from src/i18n/ui.ts instead of static ones above
     i18nTitle: true, // true, false
     // author name
-    author: 'Meichy',
+    author: 'radishzz',
     // site url
-    url: 'https://meichy.netlify.app',
+    url: 'https://retypeset.radishzz.cc',
     // favicon url
     // recommended formats: svg, png or ico
-    favicon: '/icon/icons8-weary-cat-3d-fluency-96.png'
-    //'/icon/favicon.svg', // or https://example.com/favicon.svg
+    favicon: '/icons/favicon.svg', // or https://example.com/favicon.svg
   },
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
   // COLOR SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   color: {
     // default theme mode
-    mode: 'auto', // light, dark, auto
+    mode: 'light', // light, dark, auto
     light: {
       // primary color
       // used for title, hover, etc
@@ -36,17 +35,19 @@ export const themeConfig: ThemeConfig = {
       secondary: 'oklch(40% 0.005 298)',
       // background color
       background: 'oklch(96% 0.005 298)',
+      // highlight color
+      // used for navbar, selected text, etc
+      highlight: 'oklch(0.93 0.195089 103.2532 / 0.5)', // rgba(255,235,0,0.5)
     },
     dark: {
       // primary color
-      // used for title, hover, etc
-      // oklch color picker: https://oklch.com/
       primary: 'oklch(92% 0.005 298)',
       // secondary color
-      // used for post text
       secondary: 'oklch(77% 0.005 298)',
       // background color
       background: 'oklch(22% 0.005 298)',
+      // highlight color
+      highlight: 'oklch(0.93 0.195089 103.2532 / 0.2)', // rgba(255,235,0,0.2)
     },
   },
   // COLOR SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
@@ -54,40 +55,54 @@ export const themeConfig: ThemeConfig = {
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   global: {
     // default language
-    locale: 'zh', // zh, zh-tw, ja, en, es, ru
+    locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
     // more languages
-    // not fill in the locale code above again
-    moreLocales: [], // ['zh', 'zh-tw', 'ja', 'en', 'es', 'ru']
+    // not fill in the locale code above again, can be an empty array []
+    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
     dateFormat: 'YYYY-MM-DD', // YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
-    // gap between title and subtitle
-    titleGap: 2, // 1, 2, 3
+    // enable table of contents for all posts by default
+    toc: true, // true, false
     // enable KaTeX for mathematical formulas rendering
-    katex: false, // true, false
+    katex: true, // true, false
+    // reduce animations and transitions to improve performance
+    reduceMotion: false, // true, false
   },
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
   // COMMENT SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   comment: {
     // enable comment system
-    enabled: false, // true, false
-    // waline comment system
+    enabled: true, // true, false
+    // giscus
+    // https://giscus.app/
+    giscus: {
+      repo: '',
+      repoID: '',
+      category: '',
+      categoryID: '',
+      mapping: 'pathname',
+      strict: '0',
+      reactionsEnabled: '1',
+      emitMetadata: '0',
+      inputPosition: 'bottom',
+    },
+    // waline
     // https://waline.js.org/en/
     waline: {
       // server url
-      serverURL: '',
+      serverURL: 'https://retypeset-comment.radishzz.cc',
       // emoji url
       emoji: [
-        '',
+        'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
         // 'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
         // more emojis: https://waline.js.org/en/guide/features/emoji.html
       ],
       // gif search
       search: false, // true, false
       // image uploader
-      // bug: unable to hide image uploader icon
       imageUploader: false, // true, false
     },
   },
@@ -96,7 +111,7 @@ export const themeConfig: ThemeConfig = {
   // SEO SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   seo: {
     // @twitter ID
-    // twitterID: '',
+    twitterID: '@radishzz_',
     // site verification
     verification: {
       // google search console
@@ -139,20 +154,20 @@ export const themeConfig: ThemeConfig = {
     links: [
       {
         name: 'RSS',
-        url: '/rss.xml', // rss.xml, atom.xml
+        url: '/atom.xml', // or /rss.xml
       },
       {
         name: 'GitHub',
         url: 'https://github.com/radishzzz/astro-theme-retypeset',
       },
-      //{
-      //  name: 'Twitter',
-      //  url: '',
-      // },
+      {
+        name: 'Email',
+        url: 'email@radishzz.cc',
+      },
       // {
-      //   name: 'Email',
-      //   url: 'https://example@gmail.com',
-      // }
+      //   name: 'X',
+      //   url: 'https://x.com/radishzz_',
+      // },
     ],
     // year of website start
     startYear: 2025,
@@ -161,13 +176,9 @@ export const themeConfig: ThemeConfig = {
 
   // PRELOAD SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   preload: {
-    // link prefetch
-    // docs: https://docs.astro.build/en/guides/prefetch/#prefetch-strategies
-    linkPrefetch: 'viewport', // hover, tap, viewport, load
-    // comment server url
-    commentURL: 'https://retypeset-comment.radishzz.cc',
     // image hosting url
-    imageHostURL: '',
+    // optimize remote images in Markdown files to avoid cumulative layout shift
+    imageHostURL: 'image.radishzz.cc',
     // custom google analytics js
     // for users who route analytics javascript to a customized domain
     // See https://gist.github.com/xiaopc/0602f06ca465d76bd9efd3dda9393738

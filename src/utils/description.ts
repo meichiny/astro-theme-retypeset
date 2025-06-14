@@ -1,11 +1,11 @@
 import type { CollectionEntry } from 'astro:content'
-import { defaultLocale } from '@/config'
 import MarkdownIt from 'markdown-it'
+import { defaultLocale } from '@/config'
 
-type ExcerptScene = 'list' | 'meta' | 'og' | 'rss'
+type ExcerptScene = 'list' | 'meta' | 'og' | 'feed'
 
 const parser = new MarkdownIt()
-const isCJKLang = (lang: string) => ['zh', 'zh-tw', 'ja'].includes(lang)
+const isCJKLang = (lang: string) => ['zh', 'zh-tw', 'ja', 'ko'].includes(lang)
 
 // Excerpt length in different scenarios
 const EXCERPT_LENGTHS: Record<ExcerptScene, {
@@ -24,7 +24,7 @@ const EXCERPT_LENGTHS: Record<ExcerptScene, {
     cjk: 70,
     other: 140,
   },
-  rss: {
+  feed: {
     cjk: 70,
     other: 140,
   },
@@ -45,11 +45,13 @@ export function generateExcerpt(
   scene: ExcerptScene,
   lang: string,
 ): string {
-  if (!content)
+  if (!content) {
     return ''
+  }
 
-  // Remove Markdown headings
+  // Remove HTML comments and Markdown headings
   const contentWithoutHeadings = content
+    .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/^#{1,6}\s+\S.*$/gm, '')
     .replace(/\n{2,}/g, '\n\n')
 
@@ -72,8 +74,9 @@ export function generateExcerpt(
     .replace(/([。？！："」』])\s+/g, '$1')
   const excerpt = normalizedText.slice(0, length).trim()
   // Remove trailing punctuation from the excerpt
-  if (normalizedText.length > length)
+  if (normalizedText.length > length) {
     return `${excerpt.replace(/\p{P}+$/u, '')}...`
+  }
   return excerpt
 }
 
@@ -82,10 +85,15 @@ export function generateDescription(
   post: CollectionEntry<'posts'>,
   scene: ExcerptScene,
 ): string {
-  // Prioritize existing description
-  if (post.data.description)
-    return post.data.description
+  const lang = post.data.lang || defaultLocale
 
-  const lang = (!post.data.lang || post.data.lang === '') ? defaultLocale : post.data.lang
+  // Prioritize existing description
+  if (post.data.description) {
+    // Only apply character limits in OG scene
+    return scene === 'og'
+      ? generateExcerpt(post.data.description, scene, lang)
+      : post.data.description
+  }
+
   return generateExcerpt(post.body || '', scene, lang)
 }

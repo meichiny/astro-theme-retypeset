@@ -20,11 +20,13 @@ export interface ThemeConfig {
       primary: string
       secondary: string
       background: string
+      highlight: string
     }
     dark: {
       primary: string
       secondary: string
       background: string
+      highlight: string
     }
   }
 
@@ -33,8 +35,9 @@ export interface ThemeConfig {
     moreLocales: typeof supportedLangs[number][]
     fontStyle: 'sans' | 'serif'
     dateFormat: 'YYYY-MM-DD' | 'MM-DD-YYYY' | 'DD-MM-YYYY' | 'MONTH DAY YYYY' | 'DAY MONTH YYYY'
-    titleGap: 1 | 2 | 3
+    toc: boolean
     katex: boolean
+    reduceMotion: boolean
   }
 
   comment: {
@@ -44,6 +47,17 @@ export interface ThemeConfig {
       emoji?: string[]
       search?: boolean
       imageUploader?: boolean
+    }
+    giscus?: {
+      repo?: string
+      repoID?: string
+      category?: string
+      categoryID?: string
+      mapping?: 'pathname' | 'url' | 'title' | 'og:title'
+      strict?: '0' | '1'
+      reactionsEnabled?: '0' | '1'
+      emitMetadata?: '0' | '1'
+      inputPosition?: 'top' | 'bottom'
     }
   }
 
@@ -72,9 +86,7 @@ export interface ThemeConfig {
     startYear: number
   }
 
-  preload: {
-    linkPrefetch: 'hover' | 'tap' | 'viewport' | 'load'
-    commentURL?: string
+  preload?: {
     imageHostURL?: string
     customGoogleAnalyticsJS?: string
     customUmamiAnalyticsJS?: string
