@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/cats/两只口炎流浪猫的救助日记.md",
-                "mode": "source",
-                "source": false
+                "file": "content/posts/reading/搜索词推荐可能做坏事.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "两只口炎流浪猫的救助日记"
+              "title": "搜索词推荐可能做坏事"
             }
           }
         ]
@@ -160,18 +160,37 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "remotely-save:Remotely Save": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
       "switcher:打开快速切换": false,
       "graph:查看关系图谱": false,
       "canvas:新建白板": false,
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "command-palette:打开命令面板": false,
+      "cloud-sync:Cloud sync": false
     }
   },
-  "active": "5ff47a05ef2a2e41",
+  "active": "476d80b5ac571764",
   "lastOpenFiles": [
-    "assets/chuba-run.png",
-    "assets/chuba-return.png",
+    "assets/baidu-feedback-2.png",
+    "assets/baidu-search.png",
+    "assets/baidu-feedback-1.png",
+    "assets/wexin-search-feedback.png",
+    "assets/wexin-search.jpg",
+    "content/posts/life/昆明囧行.md",
+    "content/posts/reading/读《人人都是产品经理》.md",
+    "content/posts/reading/搜索词推荐可能做坏事.md",
+    "assets/daguanlou-11.jpg",
+    "assets/dianchi-20.jpg",
+    "assets/daguanlou-21.jpg",
+    "assets/daguanlou-18.jpg",
+    "assets/daguanlou-15.jpg",
+    "assets/dianchi-redleg.jpg",
+    "content/posts/life/上海出差游玩.md",
+    "content/posts/life/姗姗来迟的学骑自行车.md",
+    "content/posts/life/不应只是剪刀手.md",
+    "content/posts/cats/两只口炎流浪猫的救助日记.md",
     "content/about/about-zh.md",
     "content/posts/Universal Article.md"
   ]
