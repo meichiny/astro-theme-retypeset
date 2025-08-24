@@ -9,8 +9,17 @@ export const langMap: Record<string, string[]> = {
 }
 
 // Waline Language Map
-// https://waline.js.org/guide/i18n.html
+// https://waline.js.org/en/guide/features/i18n.html
 export const walineLocaleMap: Record<string, string> = {
+  'de': 'en-US', // fallback to English
+  'en': 'en-US',
+  'es': 'es',
+  'fr': 'fr-FR',
+  'ja': 'jp-JP',
+  'ko': 'en-US', // fallback to English
+  'pl': 'en-US', // fallback to English
+  'pt': 'pt-BR',
+  'ru': 'ru-RU',
   'zh': 'zh-CN',
 //  'zh-tw': 'zh-TW',
 //  'ja': 'jp-JP', // Waline uses jp-JP instead of ja-JP

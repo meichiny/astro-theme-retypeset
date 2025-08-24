@@ -1,7 +1,7 @@
 # Retypeset
 
-<img alt="Cover Image" src="assets/images/retypeset-en-desktop.webp"/>
-<img alt="Cover Image" src="assets/images/retypeset-en-mobile.webp"/>
+![Cover Image](assets/images/v1/retypeset-en-desktop.webp)
+![Cover Image](assets/images/v1/retypeset-en-mobile.webp)
 
 [简体中文](assets/docs/README.zh.md)｜[繁体中文](assets/docs/README.zh-tw.md)｜[日本語](assets/docs/README.ja.md)｜[Español](assets/docs/README.es.md)｜[Français](assets/docs/README.fr.md)｜[Русский](assets/docs/README.ru.md)
 
@@ -59,7 +59,7 @@ Retypeset is a static blog theme based on the [Astro](https://astro.build/) fram
    pnpm dev
    ```
 
-3. Refer to the [Theme Guide](https://retypeset.radishzz.cc/en/posts/theme-guide/) to customize your blog and create new articles.
+3. Refer to the [Theme Guide](https://retypeset.radishzz.cc/en/posts/theme-guide/) to customize your blog and create new posts.
 4. Refer to the [Astro Deployment Guides](https://docs.astro.build/en/guides/deploy/) to deploy your blog to Netlify, Vercel, or other platforms.
 
 &emsp;[![Deploy to Netlify](assets/images/deploy-netlify.svg)](https://app.netlify.com/start) [![Deploy to Vercel](assets/images/deploy-vercel.svg)](https://vercel.com/new)
@@ -71,7 +71,7 @@ Retypeset releases [new features](https://github.com/radishzzz/astro-theme-retyp
 ## Credits
 
 - [Typography](https://github.com/moeyua/astro-theme-typography)
-- [Fuwriu](https://github.com/saicaca/fuwari)
+- [Fuwari](https://github.com/saicaca/fuwari)
 - [Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)
 - [AstroPaper](https://github.com/satnaing/astro-paper)
 - [heti](https://github.com/sivan/heti)

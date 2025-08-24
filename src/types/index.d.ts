@@ -3,7 +3,6 @@ import type { supportedLangs } from '@/i18n/config'
 type Exclude<T, U> = T extends U ? never : T
 
 export interface ThemeConfig {
-
   site: {
     title: string
     subtitle: string
@@ -13,7 +12,6 @@ export interface ThemeConfig {
     url: string
     favicon: string
   }
-
   color: {
     mode: 'light' | 'dark' | 'auto'
     light: {
@@ -29,7 +27,6 @@ export interface ThemeConfig {
       highlight: string
     }
   }
-
   global: {
     locale: typeof supportedLangs[number]
     moreLocales: typeof supportedLangs[number][]
@@ -39,28 +36,29 @@ export interface ThemeConfig {
     katex: boolean
     reduceMotion: boolean
   }
-
   comment: {
     enabled: boolean
-    waline?: {
-      serverURL?: string
-      emoji?: string[]
-      search?: boolean
-      imageUploader?: boolean
-    }
     giscus?: {
       repo?: string
-      repoID?: string
+      repoId?: string
       category?: string
-      categoryID?: string
+      categoryId?: string
       mapping?: 'pathname' | 'url' | 'title' | 'og:title'
       strict?: '0' | '1'
       reactionsEnabled?: '0' | '1'
       emitMetadata?: '0' | '1'
       inputPosition?: 'top' | 'bottom'
     }
+    twikoo?: {
+      envId?: string
+    }
+    waline?: {
+      serverURL?: string
+      emoji?: string[]
+      search?: boolean
+      imageUploader?: boolean
+    }
   }
-
   seo?: {
     twitterID?: string
     verification?: {
@@ -77,7 +75,6 @@ export interface ThemeConfig {
     }
     apiflashKey?: string
   }
-
   footer: {
     links: {
       name: string
@@ -85,7 +82,6 @@ export interface ThemeConfig {
     }[]
     startYear: number
   }
-
   preload?: {
     imageHostURL?: string
     customGoogleAnalyticsJS?: string

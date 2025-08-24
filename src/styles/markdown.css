@@ -44,17 +44,26 @@
 }
 
 /* Paragraphs */
+<<<<<<< HEAD
 .heti :where(p) {
+=======
+.heti :where(p:not(.no-heti):not(.no-heti *)) {
+>>>>>>> master
   --at-apply: 'mb-4 text-pretty cjk:text-justify';
 }
 
 /* Links */
+<<<<<<< HEAD
 .heti :where(a:not(.gc-container)) {
+=======
+.heti :where(a:not(.no-heti):not(.no-heti *)) {
+>>>>>>> master
   --at-apply: 'font-semibold tracking-0 underline underline-0.075em decoration-secondary/80 underline-offset-0.1em cjk:break-all';
   --at-apply: 'transition-colors ease-out hover:(c-primary decoration-primary/80) lg:underline-0.1em';
 }
 
 /* Images */
+<<<<<<< HEAD
 .heti :where(img) {
   --at-apply: 'mx-auto cursor-zoom-in';
 }
@@ -63,6 +72,16 @@
 }
 .heti :where(figure) {
   --at-apply: 'mx-auto my-6';
+=======
+.heti :where(img:not(.no-heti):not(.no-heti *)) {
+  --at-apply: 'mx-auto cursor-zoom-in';
+}
+.heti :where(img:not(figure img):not(.no-heti):not(.no-heti *)) {
+  --at-apply: 'my-6';
+}
+.heti :where(figure) {
+  --at-apply: 'my-6 w-full';
+>>>>>>> master
 }
 .heti :where(figcaption) {
   --at-apply: 'mt-2.5 text-center text-sm c-secondary/80';
@@ -74,6 +93,7 @@
   --at-apply: 'mb-4';
 }
 
+<<<<<<< HEAD
 /* Video */
 .heti iframe {
   --at-apply: 'my-6 aspect-video w-full';
@@ -85,6 +105,8 @@
   --at-apply: 'mb-4';
 }
 
+=======
+>>>>>>> master
 /* Code Blocks */
 .heti :where(pre) {
   --at-apply: 'overflow-auto uno-round-border px-4 py-3 bg-secondary/5!';
@@ -113,7 +135,11 @@ html.dark .heti pre span {
 
 /* Inline Code */
 .heti :where(code) {
+<<<<<<< HEAD
   --at-apply: 'uno-round-border bg-secondary/5 px-0.4em py-0.2em text-0.85em tracking-0 cjk:break-all';
+=======
+  --at-apply: 'uno-round-border bg-secondary/5 px-0.4em py-0.15em text-0.85em tracking-0 cjk:break-all';
+>>>>>>> master
   counter-reset: line;
 }
 .heti code span.line {
@@ -262,8 +288,13 @@ html.dark .heti :where(u) {
   --at-apply: 'mb-10.5 mt-14.5 h-auto border-none text-center';
 }
 .heti :where(hr)::before {
+<<<<<<< HEAD
   content: "*   *   *";
   --at-apply: 'whitespace-pre text-6 c-secondary/25 font-serif';
+=======
+  --at-apply: 'whitespace-pre text-6 c-secondary/25 font-serif';
+  content: "*   *   *";
+>>>>>>> master
 }
 
 /* Bold */

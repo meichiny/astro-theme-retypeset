@@ -17,7 +17,7 @@ export const themeConfig: ThemeConfig = {
     url: 'https://meichy.netlify.app',
     // favicon url
     // recommended formats: svg, png or ico
-    favicon: '/icon/icons8-weary-cat-3d-fluency-96.png', // or https://example.com/favicon.svg
+    favicon: '/icons/favicon.svg', // or https://example.com/favicon.svg
   },
   // SITE INFORMATION >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
 
@@ -58,16 +58,16 @@ export const themeConfig: ThemeConfig = {
     locale: 'zh', // de, en, es, fr, ja, ko, pl, pt, ru, zh, zh-tw
     // more languages
     // not fill in the locale code above again, can be an empty array []
-    moreLocales: [], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
+    moreLocales: ['en', 'es', 'ja', 'ru', 'zh-tw'], // ['de', 'en', 'es', 'fr', 'ja', 'ko', 'pl', 'pt', 'ru', 'zh', 'zh-tw']
     // font styles for post text
     fontStyle: 'sans', // sans, serif
     // date format for posts
     dateFormat: 'YYYY-MM-DD', // YYYY-MM-DD, MM-DD-YYYY, DD-MM-YYYY, MONTH DAY YYYY, DAY MONTH YYYY
-    // enable table of contents for all posts by default
+    // table of contents for posts
     toc: true, // true, false
-    // enable KaTeX for mathematical formulas rendering
+    // KaTeX math rendering
     katex: true, // true, false
-    // reduce animations and transitions to improve performance
+    // reduce motion
     reduceMotion: false, // true, false
   },
   // GLOBAL SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> END
@@ -75,19 +75,25 @@ export const themeConfig: ThemeConfig = {
   // COMMENT SETTINGS >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> START
   comment: {
     // enable comment system
-    enabled: false, // true, false
+    enabled: true, // true, false
     // giscus
     // https://giscus.app/
     giscus: {
       repo: '',
-      repoID: '',
+      repoId: '',
       category: '',
-      categoryID: '',
+      categoryId: '',
       mapping: 'pathname',
       strict: '0',
       reactionsEnabled: '1',
       emitMetadata: '0',
       inputPosition: 'bottom',
+    },
+    // twikoo
+    // https://twikoo.js.org/
+    twikoo: {
+      envId: '',
+      // version: frontend version can be changed in package.json
     },
     // waline
     // https://waline.js.org/en/
@@ -160,10 +166,10 @@ export const themeConfig: ThemeConfig = {
         name: 'GitHub',
         url: 'https://github.com/radishzzz/astro-theme-retypeset',
       },
-      //{
-      //  name: 'Email',
-      //  url: 'email@radishzz.cc',
-      //},
+      {
+        name: 'Email',
+        url: 'email@radishzz.cc',
+      },
       // {
       //   name: 'X',
       //   url: 'https://x.com/radishzz_',
@@ -181,7 +187,7 @@ export const themeConfig: ThemeConfig = {
     imageHostURL: 'image.radishzz.cc',
     // custom google analytics js
     // for users who route analytics javascript to a customized domain
-    // See https://gist.github.com/xiaopc/0602f06ca465d76bd9efd3dda9393738
+    // see https://gist.github.com/xiaopc/0602f06ca465d76bd9efd3dda9393738
     customGoogleAnalyticsJS: '',
     // custom umami analytics js
     // for users who deploy umami on their own, or route analytics javascript to a customized domain

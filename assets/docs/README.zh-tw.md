@@ -1,7 +1,7 @@
 # Retypeset
 
-<img alt="Cover Image" src="../images/retypeset-zh-desktop.webp"/>
-<img alt="Cover Image" src="../images/retypeset-zh-mobile.webp"/>
+![Cover Image](../images/v1/retypeset-zh-desktop.webp)
+![Cover Image](../images/v1/retypeset-zh-mobile.webp)
 
 Retypeset 是一款基於 [Astro](https://astro.build/) 框架的靜態部落格主題，中文名為重新編排。本主題以 [活版印字](https://astro-theme-typography.vercel.app/) 為設計靈感，通過建立全新的視覺規範，對所有頁面進行重新編排，打造紙質書頁般的閱讀體驗，再現版式之美。所見皆為細節，方寸盡顯優雅。
 
@@ -69,7 +69,7 @@ Retypeset 會不定期發布 [新功能](https://github.com/radishzzz/astro-them
 ## 鳴謝
 
 - [Typography](https://github.com/moeyua/astro-theme-typography)
-- [Fuwriu](https://github.com/saicaca/fuwari)
+- [Fuwari](https://github.com/saicaca/fuwari)
 - [Redefine](https://github.com/EvanNotFound/hexo-theme-redefine)
 - [AstroPaper](https://github.com/satnaing/astro-paper)
 - [赫蹏](https://github.com/sivan/heti)
