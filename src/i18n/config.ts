@@ -44,5 +44,21 @@ export const giscusLocaleMap: Record<string, string> = {
   //'zh-tw': 'zh-TW',
 }
 
+// Twikoo Language Map
+// https://github.com/twikoojs/twikoo/blob/main/src/client/utils/i18n/index.js
+export const twikooLocaleMap: Record<string, string> = {
+  'zh': 'zh-CN',
+  //'de': 'de',
+  //'en': 'en',
+  //'es': 'es',
+  //'fr': 'fr',
+  //'ja': 'ja',
+  //'ko': 'ko',
+  //'pl': 'pl',
+  //'pt': 'pt',
+  //'ru': 'ru',
+  //'zh-tw': 'zh-TW',
+}
+
 // Supported Languages
 export const supportedLangs = Object.keys(langMap).flat()
