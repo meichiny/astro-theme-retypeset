@@ -3,6 +3,11 @@ dist/
 .output/
 .astro/
 
+# theme config
+src/i18n/ui.ts
+src/i18n/config.ts
+src/config.ts
+
 # dependencies
 node_modules/
 
